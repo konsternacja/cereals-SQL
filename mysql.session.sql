@@ -1,5 +1,3 @@
-## Creating a SQL database
-
 SHOW DATABASES;
 
 CREATE DATABASE cereals;
@@ -34,8 +32,15 @@ PRIMARY KEY (brand)
 USE cereals;
 
 LOAD DATA LOCAL INFILE '/home/konsternacja/Git/cereals-SQL/data/cereal.csv'
-INTO TABLE nutrition, other
+INTO TABLE nutrition
 FIELDS TERMINATED BY ','
 LINES TERMINATED BY '/n'
 IGNORE 1 ROWS
 (brand, mfr, type, calories, protein, fat, sodium, fiber, carbo, sugars, potass, vitamins, shelf, weight, cups, rating);
+
+LOAD DATA LOCAL INFILE '/home/konsternacja/Git/cereals-SQL/data/cereal.csv'
+INTO TABLE nutrition
+FIELDS TERMINATED BY ','
+LINES TERMINATED BY '/n'
+IGNORE 1 ROWS
+(brand, mfr, type, shelf, weight, cups, rating);
