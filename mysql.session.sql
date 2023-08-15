@@ -1,6 +1,8 @@
+CREATE TABLE cereals;
+
 USE cereals;
 
--- Creating table 'nutrition'
+-- Creating table 'main'
 CREATE TABLE IF NOT EXISTS main (
     brand VARCHAR(255),
     mfr VARCHAR(1),
